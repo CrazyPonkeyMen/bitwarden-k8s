@@ -18,5 +18,5 @@ spec:
         number: 80
   ingressClassName: nginx
   rules:
-    - host: {{ $.Values.ingress.hosts }}
+    - host: {{ $.Values.ingress.host }}
 {{- end }}
