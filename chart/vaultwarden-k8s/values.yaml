@@ -50,10 +50,6 @@ ingress:
   path: /
   hosts:
     - vaultwarden.example
-  tls:
-    - secretName: vaultwarden-tls
-      hosts:
-        - vaultwarden.example
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
