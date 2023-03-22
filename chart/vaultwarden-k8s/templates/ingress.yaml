@@ -15,14 +15,12 @@ metadata:
 {{ toYaml . | indent 4 }}
 {{- end }}
 spec:
+  defaultBackend:
+    service:
+      name: {{ $fullName }}
+      port:
+        number: 80
+  ingressClassName: nginx
   rules:
-  {{- range .Values.ingress.hosts }}
-    - host: {{ . | quote }}
-      http:
-        paths:
-          - path: {{ $ingressPath }}
-            backend:
-              serviceName: {{ $fullName }}
-              servicePort: http
-  {{- end }}
+    - host: {{ $.Values.ingress.hosts }}
 {{- end }}
