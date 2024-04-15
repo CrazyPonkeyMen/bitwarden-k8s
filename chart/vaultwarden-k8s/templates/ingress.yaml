@@ -24,6 +24,10 @@ spec:
         - {{ . | quote }}
         {{- end }}
       secretName: {{ .secretName }}
+    {{- end }}
+  {{- end }}
+  rules:
+    - host: {{ $.Values.ingress.host }}
       http:
         paths:
           - backend:
@@ -33,8 +37,4 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
-    {{- end }}
-  {{- end }}
-  rules:
-    - host: {{ $.Values.ingress.host }}
 {{- end }}
