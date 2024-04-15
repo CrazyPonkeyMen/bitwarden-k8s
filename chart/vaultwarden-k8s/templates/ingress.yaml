@@ -15,11 +15,6 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  defaultBackend:
-    service:
-      name: {{ $fullName }}
-      port:
-        number: 80
   ingressClassName: {{ .Values.ingress.ingressClassName }}
   {{- if .Values.ingress.tls }}
   tls:
@@ -29,6 +24,15 @@ spec:
         - {{ . | quote }}
         {{- end }}
       secretName: {{ .secretName }}
+      http:
+        paths:
+          - backend:
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
     {{- end }}
   {{- end }}
   rules:
