@@ -48,6 +48,7 @@ ingress:
   path: /
   host: vaultwarden.example
   tls: []
+  ingressClassName: nginx
 
 resources:
   {}

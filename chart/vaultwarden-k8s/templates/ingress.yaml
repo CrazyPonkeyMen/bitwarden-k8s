@@ -20,7 +20,7 @@ spec:
       name: {{ $fullName }}
       port:
         number: 80
-  ingressClassName: nginx
+  ingressClassName: {{ .Values.ingress.ingressClassName }}
   {{- if .Values.ingress.tls }}
   tls:
     {{- range .Values.ingress.tls }}
