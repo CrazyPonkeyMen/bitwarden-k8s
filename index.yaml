@@ -22,6 +22,24 @@ entries:
   vaultwarden-k8s:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2024-04-15T14:16:37.662906997Z"
+    description: A vaultwarden Helm chart for Kubernetes
+    digest: 1da60d8f7bcf95670957eae9bb147dbb3697826d9434feac62a33e6949977b85
+    home: https://github.com/dani-garcia/vaultwarden_rs
+    icon: https://raw.githubusercontent.com/vaultwarden/brand/master/icons/icon.svg
+    maintainers:
+    - email: hello@codewave.eu
+      name: CodeWave
+      url: https://codewave.eu
+    name: vaultwarden-k8s
+    sources:
+    - https://github.com/dani-garcia/vaultwarden_rs
+    - https://github.com/cdwv/vaultwarden-k8s
+    urls:
+    - https://github.com/bartoszpijet/vaultwarden-k8s/releases/download/vaultwarden-k8s-0.1.16/vaultwarden-k8s-0.1.16.tgz
+    version: 0.1.16
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2024-04-15T14:13:59.726968611Z"
     description: A vaultwarden Helm chart for Kubernetes
     digest: c400cbe1f6dfd484c0407313759f2c48759e8309748a031575e3c20ccd1e722f
@@ -164,4 +182,4 @@ entries:
     urls:
     - https://github.com/bartoszpijet/vaultwarden-k8s/releases/download/vaultwarden-k8s-0.1.8/vaultwarden-k8s-0.1.8.tgz
     version: 0.1.8
-generated: "2024-04-15T14:13:59.727018735Z"
+generated: "2024-04-15T14:16:37.662949617Z"
